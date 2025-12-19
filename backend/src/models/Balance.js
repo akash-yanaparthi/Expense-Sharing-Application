@@ -19,7 +19,7 @@ const balanceSchema = new mongoose.Schema(
     },
     amount: {
       type: Number,
-      required: true // paise
+      required: true 
     }
   },
   { timestamps: true }

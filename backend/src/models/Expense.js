@@ -29,7 +29,7 @@ const expenseSchema = new mongoose.Schema(
     },
     amount: {
       type: Number,
-      required: true // stored in paise
+      required: true 
     },
     splitType: {
       type: String,

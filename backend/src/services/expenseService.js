@@ -16,7 +16,6 @@ async function addExpense(data) {
     group.members.length
   );
 
-  // Save expense
   const expense = await Expense.create({
     groupId,
     paidBy,
@@ -26,7 +25,6 @@ async function addExpense(data) {
     description
   });
 
-  // Update balances
   for (let userId in splitMap) {
     if (userId !== paidBy.toString()) {
       await updateBalance(groupId, userId, paidBy, splitMap[userId]);
